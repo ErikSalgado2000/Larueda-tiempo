@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personajes - La Rueda del Tiempo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        .contenedor {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+        .lista-personajes {
+            display: flex;
+            flex-direction: column;
+            margin-right: 20px;
+        }
+        button {
+            background-color: #eb9b5a;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #fffb00;
+        }
+        .descripcion {
+            background-color: white;
+            padding: 20px;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 254, 254, 0.986);
+        }
+        .logo-tecnico {
+      position: absolute;
+      top: 10px;
+      left:10px ;
+      width: 100px;
+      height: auto;
+     }
+    </style>
+</head>
+<body style="background-color: rgb(134, 31, 0);">
+    <img src="img/logo tecnico-nuevo.png" alt="logo-tecnico" class="logo-tecnico">
+  
+  <div style="display: flex; gap: 20px; border: 1px solid black; padding: 5px; width: fit-content; margin-left: auto;">
+    
+    <span style="border: 2px solid red; padding: 10px;">
+        <a href="index.html" style="text-decoration: none; color: rgb(255, 255, 255);">Inicio</a>
+    </span>
+    <span style="border: 2px solid blue; padding: 10px;">
+        <a href="sobre la serie.html" style="text-decoration: none; color: rgb(255, 255, 255);">Sobre la serie</a>
+    </span>
+    <span style="border: 2px solid green; padding: 10px;">
+        <a href="personaje de la rueda del tiempo.html" style="text-decoration: none; color: rgb(255, 255, 255);">Personajes</a>
+    </span>
+    <span style="border: 2px solid purple; padding: 10px;">
+        <a href="mundo y magia.html" style="text-decoration: none; color: rgb(255, 255, 255);">Mundos y Magia</a>
+    </span>
+    <span style="border: 2px solid orange; padding: 10px;">
+        <a href="noticias y teorias.html" style="text-decoration: none; color: rgb(255, 255, 255);">Noticias y Teorías</a>
+    </span>
+</div>
+    <strong></strong><h1>Personajes de La Rueda del Tiempo</h1></strong>
+    <div class="contenedor">
+        <div class="lista-personajes">
+            <h2>Protagonistas</h2>
+            <button onclick="mostrarDescripcion('rand')">Rand al’Thor</button>
+            <button onclick="mostrarDescripcion('moiraine')">Moiraine Damodred</button>
+            <button onclick="mostrarDescripcion('egwene')">Egwene al’Vere</button>
+            <button onclick="mostrarDescripcion('mat')">Matrim Cauthon</button>
+            <button onclick="mostrarDescripcion('perrin')">Perrin Aybara</button>
+            <button onclick="mostrarDescripcion('lan')">Lan Mandragoran</button>
+            <button onclick="mostrarDescripcion('nynaeve')">Nynaeve al’Meara</button>
+
+            <h2>Aes Sedai</h2>
+            <button onclick="mostrarDescripcion('suian')">Suian Sanche</button>
+            <button onclick="mostrarDescripcion('leane')">Leane Sharif</button>
+            <button onclick="mostrarDescripcion('verin')">Verin Mathwin</button>
+            <button onclick="mostrarDescripcion('elaida')">Elaida do Avriny a’Roihan</button>
+            
+            <h2>Otros Personajes</h2>
+            <button onclick="mostrarDescripcion('thom')">Thom Merrilin</button>
+            <button onclick="mostrarDescripcion('loial')">Loial</button>
+            <button onclick="mostrarDescripcion('fain')">Padan Fain</button>
+            <button onclick="mostrarDescripcion('ishamael')">Ishamael</button>
+        </div>
+
+        <div class="descripcion" id="descripcion">
+            <h2>Selecciona un personaje</h2>
+            <p>Haz clic en un personaje para ver su papel en la historia.</p>
+        </div>
+    </div>
+
+    <script>
+        function mostrarDescripcion(personaje) {
+            let descripcion = {
+                "rand": {
+                    "nombre": "Rand al’Thor",
+                    "info": "El Dragón Renacido. Destinado a luchar contra el Oscuro y salvar o destruir el mundo."
+                    
+                },
+                "moiraine": {
+                    "nombre": "Moiraine Damodred",
+                    "info": "Aes Sedai de la Ajah Azul. Busca al Dragón Renacido y guía a los jóvenes de Dos Ríos."
+                },
+                "egwene": {
+                    "nombre": "Egwene al’Vere",
+                    "info": "Futura Amyrlin Seat. Posee un gran poder y busca cambiar la Torre Blanca."
+                },
+                "mat": {
+                    "nombre": "Matrim Cauthon",
+                    "info": "Hábil con la suerte y la estrategia. Se convierte en líder de ejércitos y figura clave en la Última Batalla."
+                },
+                "perrin": {
+                    "nombre": "Perrin Aybara",
+                    "info": "Hombre lobo con una conexión especial con los lobos. Lucha por proteger a sus amigos y su pueblo."
+                },
+                "lan": {
+                    "nombre": "Lan Mandragoran",
+                    "info": "Guardián de Moiraine y heredero al trono de Malkier. Un guerrero formidable."
+                },
+                "nynaeve": {
+                    "nombre": "Nynaeve al’Meara",
+                    "info": "Sanadora poderosa y futura líder de la Torre Blanca. Posee un carácter fuerte y una gran habilidad en la magia."
+                },
+                "suian": {
+                    "nombre": "Suian Sanche",
+                    "info": "Antigua Amyrlin Seat. Aliada de Egwene y Moiraine, trabaja en la resistencia contra el control de Elaida."
+                },
+                "leane": {
+                    "nombre": "Leane Sharif",
+                    "info": "Antigua Guardiana de los Sellos, transformada en una fuerte aliada de la rebelión Aes Sedai."
+                },
+                "verin": {
+                    "nombre": "Verin Mathwin",
+                    "info": "Aes Sedai de la Ajah Marrón con un secreto importante sobre la Sombra."
+                },
+                "elaida": {
+                    "nombre": "Elaida do Avriny a’Roihan",
+                    "info": "Aes Sedai de la Ajah Roja. Se convierte en Amyrlin Seat y gobierna con mano dura."
+                },
+                "thom": {
+                    "nombre": "Thom Merrilin",
+                    "info": "Un juglar con muchas habilidades ocultas, incluyendo el manejo de la política y el espionaje."
+                },
+                "loial": {
+                    "nombre": "Loial",
+                    "info": "Un Ogier con gran amor por la lectura y la historia. Amigo fiel de Rand y los demás."
+                },
+                "fain": {
+                    "nombre": "Padan Fain",
+                    "info": "Antiguo vendedor ambulante, corrompido por la Sombra y convertido en un enemigo peligroso."
+                },
+                "ishamael": {
+                    "nombre": "Ishamael",
+                    "info": "Uno de los Renegados más poderosos. Actúa como líder de los sirvientes del Oscuro."
+                }
+            };
+
+            document.getElementById("descripcion").innerHTML = `
+                <h2>${descripcion[personaje].nombre}</h2>
+                <p>${descripcion[personaje].info}</p>
+            `;
+        }
+    </script>
+    <footer class="footer">
+        <p>III BTP ROBOTICA S-9 | erik.salgado@tecnico-honduras.com | <a href="formulario-registro.html">Completa el formulario</a> </p>
+      </footer>
+</body>
+</html>
